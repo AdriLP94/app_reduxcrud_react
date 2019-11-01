@@ -1,25 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import {Provider} from 'react-redux';
+import store from './store';
+
+import Header from './components/Header';
+import AddEditProducto from './components/AddEditProducto';
+import ListaProductos from './components/ListaProductos';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Provider store={store}>
+        <Header/>
+        <div className="container">
+          <Switch>
+            <Route exact path="/" component={ListaProductos}/>
+            <Route exact path="/productos/nuevo" render = { () =>
+              <AddEditProducto mensaje="Añadir nuevo producto"/>
+            } />
+            <Route exact path="/productos/editar/:id" component={AddEditProducto}/>
+          </Switch>
+        </div>
+      </Provider>
+    </Router>
   );
 }
 
