@@ -19,7 +19,9 @@ function App() {
             <Route exact path="/productos/nuevo" render = { () =>
               <AddEditProducto mensaje="Añadir nuevo producto"/>
             } />
-            <Route exact path="/productos/editar/:id" component={AddEditProducto}/>
+            <Route exact path="/productos/editar/:id" render = { () =>
+              <AddEditProducto mensaje="Editar producto"/>
+            }/>
           </Switch>
         </div>
       </Provider>
