@@ -1,0 +1,54 @@
+{
+  "productos": [
+    {
+      "id": 1,
+      "nombre": "aprendiendo Redux",
+      "precio": "30"
+    },
+    {
+      "id": 2,
+      "nombre": "aprendiendo Angular",
+      "precio": "15"
+    },
+    {
+      "nombre": "Hola",
+      "precio": "15",
+      "id": 3
+    },
+    {
+      "nombre": "Producto nuevo",
+      "precio": "20",
+      "id": 4
+    },
+    {
+      "nombre": "Nuevo",
+      "precio": "50",
+      "id": 5
+    },
+    {
+      "nombre": "He",
+      "precio": "1",
+      "id": 6
+    },
+    {
+      "nombre": "asas",
+      "precio": "22",
+      "id": 7
+    },
+    {
+      "nombre": "fsdfsf",
+      "precio": "22",
+      "id": 8
+    },
+    {
+      "nombre": "ergrg",
+      "precio": "33",
+      "id": 9
+    },
+    {
+      "nombre": "Adsdad",
+      "precio": "222",
+      "id": 10
+    }
+  ]
+}
